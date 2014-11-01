@@ -1,3 +1,3 @@
 ## TeX
 
-This repo contains all the my LaTeX files for my various courses.
+The name says it all. This is a repo with all my latex source-codes.
