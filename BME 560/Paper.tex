@@ -1,0 +1,47 @@
+\documentclass[12pt,journal,compsoc]{IEEEtran}
+\usepackage{graphicx}
+\graphicspath{ {./_figures/} }
+\setlength\fboxsep{1pt}
+\setlength\fboxrule{1pt}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage[english]{babel}
+\usepackage{blindtext}
+\usepackage{times}
+
+\begin{document}
+  \markboth{BME 560 Medical Imaging: X-ray, CT, and Nuclear Methods. Fall, 2014}%
+  {Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for Computer Society Journals}
+  
+  \title{Intensity Modulated Radiation Therapy using Tomotherapy}
+  \author{Rahul Krishna, 
+  \IEEEauthorblockA{\normalsize {\textit{Dept. of Electrical and Computer Engineering}\\
+    North Carolina State University, Email: \href{mailto:rkrish11@ncsu.edu}{{rkrish11@ncsu.edu}}}}}
+
+	\IEEEcompsoctitleabstractindextext{%
+  \begin{abstract}
+    Tomotherapy is a form of 3D-conformal radiotherapy which involves the delivery of intensity modulated radiation therapy (IMRT) using rotational fan beam in a manner quite similar to that seen in modern CT scanners. The modern tomotherapy systems have a couch and gantry which are in continuous motion, closely resembeling the traditional helical-CT systems. This kind of radiotherapy is hence called helical tomotherapy. Helical tomotherapy delivers IMRT based on the images of the patient in the treatment position, and these systems do this by acquiring CT images of the patient. This paper is a discourse on the current state-of-the-art in the field, foucsing primarily the technique's conceptual working and results of its clinical implementation. 
+  \end{abstract}
+  % IEEEtran.cls defaults to using nonbold math in the Abstract.
+  % This preserves the distinction between vectors and scalars. However,
+  % if the journal you are submitting to favors bold math in the abstract,
+  % then you can use LaTeX's standard command \boldmath at the very start
+  % of the abstract to achieve this. Many IEEE journals frown on math
+  % in the abstract anyway. In particular, the Computer Society does
+  % not want either math or citations to appear in the abstract.
+  
+  % Note that keywords are not normally used for peerreview papers.
+  \begin{IEEEkeywords}
+    Tomotherapy, Intensity Modulated Radiation Therapy.
+  \end{IEEEkeywords}}
+  \maketitle
+  
+  \section{Introduction}
+	\IEEEPARstart{T}{he} past couple of decades have seen tremendous advances in radiation oncology. The advent of faster and smaller computers has helped transform the field of radiation therapy and treatment planning. The term tomotherapy translates to ``slice therapy'', and it is derived from tomography.
+  
+  \begin{figure*}[t!]
+	\includegraphics[width=\linewidth]{tomoblockdiagram}
+  \caption{A traditional tomotherapy unit, Ref \cite{Mackie1993}. (a) A block diagram showing the ring gantry in a traditional tomotherapy unit.  }
+  \end{figure*}
+  
+\end{document}
