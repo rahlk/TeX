@@ -8,6 +8,7 @@
 \usepackage[english]{babel}
 \usepackage{blindtext}
 \usepackage{times}
+\usepackage{cite}
 
 \begin{document}
   \markboth{BME 560 Medical Imaging: X-ray, CT, and Nuclear Methods. Fall, 2014}%
@@ -41,7 +42,13 @@
   
   \begin{figure*}[t!]
 	\includegraphics[width=\linewidth]{tomoblockdiagram}
-  \caption{A traditional tomotherapy unit, Ref \cite{Mackie1993}. (a) A block diagram showing the ring gantry in a traditional tomotherapy unit.  }
+  \caption{A traditional tomotherapy unit, Ref \cite{Mackie1993}. (a) A block diagram showing the ring gantry, and the radiation source}
   \end{figure*}
+	%----------------------------------
+	% References
+  %----------------------------------
+  
+  \bibliography{Paper}{}
+  \bibliographystyle{IEEEtran}
   
 \end{document}
