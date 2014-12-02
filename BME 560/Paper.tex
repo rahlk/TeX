@@ -177,18 +177,42 @@
   between it and other IMRT techniques.
   
   \subsection{Construction}
+  \label{construction}
   \begin{figure}
     \centering
-    \subfloat[\label{fig4a}][A simplified view of the Helical Tomotherapy 
-    treatment head system in use today. The setup consists of a 6 MV linac to 
-    produce an x-ray beam which is collimated down to a fan-beam using 2 
-    moveable jaws (denoted as `y-jaws' in the image)]{
-      \includegraphics[width=\linewidth]{fig4}}\\
     \subfloat[][]{
-      \includegraphics[width=\linewidth]{fig5}}
-    
+      \includegraphics[width=\linewidth]{fig5}
+      \label{fig4a}}\\
+    \subfloat[][]{
+      \includegraphics[width=\linewidth]{fig4}
+      \label{fig4b}}
+    \caption{\protect\subref{fig4a} Axial rotation of the fan beam as the 
+      patient (represented 
+      as a cylinder) traverses laterally (Along the y-axis). 
+      \protect\subref{fig4b} A simplified view of the Helical 
+      Tomotherapy 
+      treatment system (at a gantry angle of 0$^\circ$) in use today. The 
+      setup consists of a 6 MV linac to produce an x-ray beam which is 
+      collimated down to a fan-beam using 2 moveable jaws (denoted as `y-jaws' 
+      in the image). There is also a Binary Multileaf to modulate the beam 
+      laterally. \textit{Image  
+      courtesy of \cite{Fenwick2004}}}
+    \label{fig4}
   \end{figure}
-  \label{construction}
+  Figure \ref{fig4} show the basics of dose delivery in the helical tomotherapy 
+  system. There is a short in-line 6 MV linear accelerator that rotates on a 
+  ring gantry at a source-axis of 85 cms (instead of the usual 100 cms). The 
+  patient couch is translated through the gantry bore in the y-direction as 
+  shown in \ref{fig4}\protect\subref{fig4a}. The pitch is about 0.2 to 0.5 
+  (Pitch is the distance traveled by the couch in one rotation, divided by the 
+  field width in the direction of traversal). The pair of y-jaws in 
+  \ref{fig4}\protect\subref{fig4b} are used to define the y-width of the beam. 
+  These are usually preset to values like 1,2.5, or 5 cm before imaging. 
+  Lateral modulation of the beam is achieved using the binary multileaf. This 
+  system consists of 64 binary multileaves, each having a width of 6.25 mm 
+  projecting onto an isocenter. These leaves transition rapidly between on 
+  and off states, the duration of which is made use of to modualate the 
+  intensity. 
   \subsubsection{A note on Serial Tomotherapy}
   \subsection{Radiation Characteristics}
   \label{radiation}
