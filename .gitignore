@@ -28,6 +28,9 @@
 *.out
 *.synctex.gz
 *.pdf
+*.project
+*.texclipse
+*.gitignore
 
 # Mac IDE files
 *.swp
