@@ -4,11 +4,14 @@
 \setlength\fboxsep{1pt}
 \setlength\fboxrule{1pt}
 \usepackage{multicol}
+\bstctlcite{IEEEexample:BSTcontrol}
 \usepackage{bigstrut}
 \usepackage{tabularx}
 \usepackage{tabulary}
 \usepackage{booktabs}
 \usepackage{amsmath}
+\usepackage{balance}
+\usepackage{flushend}
 \setlength{\parindent}{0em}
 \setlength{\parskip}{1em}
 \usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}
@@ -89,7 +92,7 @@
   by concurrent gantry rotation and couch/patient travel as shown in Fig. 
   \ref{fig1}. In general, the helical tomotherapy units have significantly 
   different radiation fields when compared to other radiotherapy systems. This 
-  difference can be owed to the absence of absence of a flattening filter, a 
+  difference can be owed to the absence of a flattening filter, a 
   thin target, an electron stopper, a beam hardener and a compact primary 
   collimator. This paper will briefly highlight the 
   radiation characteristics of the helical tomotherapy unit, especially in 
@@ -218,9 +221,9 @@
     \centering
     \caption{Helical Tomotherapy Characteristics}
     \begin{tabularx}{1\linewidth}{XX}
-      \toprule[0.3mm]
+      \toprule[0.4mm]
       \textbf{Parameter} & \textbf{Value} \\
-      \midrule
+      \midrule[0.4mm]
       Gantry Rotation angle & 
       7\textsuperscript{$\circ$} \\
       Projections per revolution & 51 \\
@@ -280,7 +283,7 @@
   treatment and imaging modes of helical tomotherapy. Notice that the in the 
   imaging mode the spectrum has a lower energy when compared to treatment mode; 
   this is done so as to obatin better images by improving the contrast. A more 
-  comprehensive comparision is documented in Ref. \cite{Jeraj2004}
+  comprehensive comparision is documented in Ref. \cite{Jeraj2004}.
   
   \subsection{Comparisions between IMRT techniques}
   \label{comparisions}
@@ -337,7 +340,7 @@
       \end{tabulary}}%
     
       \label{tab:compare}%
-    \end{table*}%
+    \end{table*}% \be
   Tomotherapy is different from other standard IMRT techiniques such as 
   conformal radiotherapy (CRT) techniques and non-standard IMRT techniques like 
   Cyber knife.   Standard CRT techniques generate highly conformal radiotherapy 
@@ -363,12 +366,23 @@
   \subsection{Total Body Irradiation (TBI)}
   Tomotherapy can be used in establishing total body irradiation (TBI) to gain 
   greater control over the dose distribution and to spare organs that may be at 
-  risk. It was shown in Ref. \cite{Gruen2013} that using HT provided excellent 
-  conformal 
-  lung sparing with mean doses not exceeding 10 Gy. No lung toxicity was 
-  observed for over 15 months after follow-up. Also, the overall morbidity 
-  during the treatment period was very low, corresponding to grades 1-2 side 
-  effects.
+  risk. In a study conducted by Ref. \cite{Gruen2013}, with a cohort of 10 
+  patients aged 4 - 22 years with acute lymphoblastic or myeloic leukemia, it 
+  was shown that, among other benifits, using HT provided excellent 
+  conformal lung sparing with mean doses not exceeding 10 Gy. No lung toxicity 
+  was observed for over 15 months after follow-up. Also, the overall 
+  morbidity   during the treatment period was very low, corresponding to grades 
+  1-2 side   effects. Table \ref{tbi_side} from Ref. \cite{Gruen2013} documents 
+  other side  effects, notice that none of the side effects for any patient 
+  were of grades 3 or 
+  4. 
+  
+  \begin{table}[t]
+    \caption{Acute Toxicity (Ref. \cite{Gruen2013})}
+    \centering
+    \includegraphics[width=\linewidth]{fig8.png}
+    \label{tbi_side}
+  \end{table}
   
   In general the use of HT was effective in that it provided excellent 
   individual sparing of organs and very little side effects. There are still 
@@ -379,10 +393,144 @@
   patients who are taller than this, a better solution needs to be deviced.
   
   \subsection{Whole brain helical Tomotherapy}
+  Whole brain helical tomotherapy is a possible treatment option for patients 
+  suffering from malignant melanoma with four or more brain metastates. The 
+  possiblity of integrated boost with enhanced hippocampal sparing makes the 
+  use of HT a very reliable approach.
+  
+  A study conducted by Ref. \cite{Gondi2010} showed that Helical 
+  tomotherapy 
+  spared the hippocampus, with a median dose of 5.5 Gy and maximum 
+  dose of 12.8 
+  Gy. Other linear accelerator based IMRT spared the hippocampus, 
+  with a median 
+  dose of 7.8 Gy and maximum dose of 15.3 Gy. On a per-fraction 
+  basis, mean 
+  dose to the hippocampus (normalized to 2-Gy fractions) was reduced 
+  by 87\% to 
+  0.49 Gy2 using helical tomotherapy and by 81\% to 0.73 Gy2 using 
+  LINAC-based 
+  IMRT. Target coverage and homogeneity was acceptable with both IMRT 
+  modalities, with differences largely attributed to more rapid dose 
+  falloff 
+  with helical tomotherapy.
+  
+  Another study was conducted by Ref. \cite{Hauswald2013} to explore 
+  and 
+  compare the 
+  effects of treatment and response to conventional radiotherapy with 
+  a 30 Gy 
+  dose in 10 fractions and a standard helical tomography with 30 Gy 
+  dose, 10 
+  fraction, integrated boost of 50 Gy at the regions of metastates 
+  with a 
+  hippocampal-sparing. This study showed that the even though HT 
+  produced 
+  excellent homogeneity and conformality with integrated boost, it 
+  still has 
+  some limitations when compared to classical radiotherapy on account 
+  of the 
+  fact that all HT plans had a higher dose brain exposure. The 
+  effects 
+  shouldn't be too much of an issue as the total treatment time is 
+  lower, and 
+  so too the integral dose, due to the dynamic couch setup and other 
+  design 
+  aspects of the HT system.
   \subsection{Inoperable Lung Cancer}
-  \subsection{Rectal Cancer}
+  Radiation therapy has become a standard treatment protocol for 
+  patients 
+  suffering from non-small cell lung cancer and other solitary lung 
+  metastatis. 
+  The use had been quite controversial. Among other things, the 
+  primary 
+  concerns were the expansion of the low-dose irradiated lung volume 
+  resulting 
+  from the coplanar beam delivery and uncertainity in dose 
+  distribution due to 
+  respiration. 
+  
+  However, a very recent study published by Ref. \cite{Nagai2014} seem 
+  to show 
+  that Helical Tomotherapy for lung cancer is both safe and 
+  effective. In this 
+  study 2 groups of lung tumor patients were treated; one group of 37 
+  patients 
+  were administered a dose of 48 Gy in 4 fractions and another group 
+  of 35 
+  patients were administered a dose of 50-60 Gy in 5-8 fractions. The 
+  4-fraction group had a median planning target volume (PTV) of 6.9 
+  cm\textsuperscript{3} and the 5-8 fraction group had a median PTV 
+  of 14 
+  cm\textsuperscript{3}. The study reports that only 2 of the 37 and 
+  2 out of 
+  35 patients in the 4-fraction cohort respectively had Grade-2 
+  radiation 
+  pneumonitis. No other complications were reported.
+  
+  \subsection{Colorectal Cancer}
+  A study published by Ref. \cite{Yu2013} showed that using 
+  tomotherapy 
+  could produce acceptable coverage for the target while decreasing 
+  the mean dose to sensitive surrounding areas such as bowel, bladder 
+  and femur heads. They report that while tomotherapy had a  lower 
+  radical 
+  dose homogeneity index (rHDI) compared to conventional 3D conformal 
+  radiotherapy (3D-CRT) (0.7$\pm$0.01 vs 22.05$\pm$2.76, p$<$0.001),  
+  it did significantly reduced the volume of sensitive tissues 
+  receiving a large dose; this was measured using $V_{nGy}$, which 
+  denotes the percentage of volume receiving a dose greater than n 
+  Gy. Figure \ref{fig6}, taken from \cite{Yu2013}, shows the dose 
+  reduction 
+  acheived by tomotherapy.
+  \begin{figure}[t]
+		\centering
+    \includegraphics[width=\linewidth]{fig9.png}
+    \caption{Tomotherapy(dashed blue line) significantly reduce 
+    $V_{nGy}$ for the bowel as compared to 3D-CRT (with p<0.001) for 
+    all doses except at 5 Gy (p = 0.568), Ref. \cite{Yu2013}.}
+  	\label{fig6}
+  \end{figure}
+  
+  \subsection{Arteriovenous Malformations}
+  Arteriovenous malformations (AVM) are aberrant fistulous connections between 
+  arteries and veins bypassing the normal capillary bed. It occurs in 0.2-0.8\% 
+  of the normal population. If untreated cerebral AVMs can cause hemorrhage and 
+  subsequent neurological impairments. An attempt was made by Ref. 
+  \cite{Krause2013} to 
+  validate the performance of modern tomotherapy systems in tackling AVM. 
+  
+  They 
+  reported that there were no significant results to show that tomotherapy 
+  outperforms the conventional linac based methods. In fact, as previously 
+  reported by many researchers, tomotherapy exposed bigger brain volumes 
+  to doses $\ge60\%$ of the prescription dose (average 12.75 Gy), albeit only 
+  for a short amount of time. This does, unfortunately, pose risks of 
+  permanent postradiosurgery sequelae influenced by the localisation and the 
+  volume of brain receiving 12 Gy or more. However, these were only theoretical 
+  planning comparison to explore the potential of these methods for small 
+  volume radiosurgery. HT radiosurgery might yet be beneficial for AVM with 
+  special geometry as well as for patients with brain metastases that benefit 
+  from shorter treatment times at the cost of a slightly higher brain exposure.
+  
   \section{Conclusion}
   \label{conclusions}
+  In conclusion, IMRT with helical tomotherapy is an advanced form of 
+  radiotherapy which constantly outperforms several conventional 3D-CRT. It 
+  represents one of the most important technical advances in radiation therapy 
+  since the advent of medical linear accelerator.
+  
+  Current helical tomography systems provide excellent target volume 
+  conformality while significantly reduction exposure to the surrounding 
+  sensitive tissue. This aspect of the tomotherapy system has motivated its use 
+  in oncology. Some clincal applications are listed above, this list by no 
+  means exhaustive. However, it needs to be mentioned that the results are 
+  reported for small cohorts and in many cases reports are only feasibility 
+  studies. There is a lot active research in the field and as Ref. 
+  \cite{Beavis2004} 
+  suggests, helical tomotherapy can be \textit{a} future of IMRT if not 
+  \textit{the} future.
+  
   \bibliography{Paper}{}
   \bibliographystyle{IEEEtran}
   
