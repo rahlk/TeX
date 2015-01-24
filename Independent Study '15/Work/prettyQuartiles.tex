@@ -4,8 +4,14 @@
 
 \begin{document}
 
-\newcommand{\quart}[4]\begin{picture}(100,6)%1
-    {\color{black}\put(#3,3){\circle*{4}}\put(#1,3){\line(1,0){#2}}}\end{picture}}
+\newcommand{\boxplot}[5]{\begin{picture}(100,10)
+\put(0,0){\line(0,1){8}}
+\put(100,0){\line(0,1){8}}
+\put(#1,4){\line(1,0){#2}}
+\put(#3,4){\circle*{6}}
+\put(#4,4){\line(1,0){#5}}
+\put(50,0){\line(0,1){8}}
+\end{picture}}
 
 \begin{figure}[!t]
 \renewcommand{\baselinestretch}{0.5}
@@ -14,8 +20,8 @@
 \begin{tabular}{l@{~~~}l@{~~~}r@{~~~}r@{~~~}c}
 \arrayrulecolor{darkgray}
 \rowcolor[gray]{.9}  rank & treatment & median & IQR & \\
-  1 &     No SMOTE &    3100  &  0 & \quart{0}{0}{0}{-78} \\
-  1 &        SMOTE &    6900  &  0 & \quart{99}{0}{99}{-78} \\
+  1 &     No SMOTE &    31  &  0 & \boxplot{0}{0}{0}{0}{-78} \\
+  1 &        SMOTE &    69  &  0 & \boxplot{99}{0}{99}{0}{-78} \\
 \end{tabular}}
 \end{figure}
 \end{document}
